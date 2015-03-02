@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# json_lines
+#
+# Simple little diddy that works somewhat like json_pp, but instead
+# filters each line to json_pp seperately.  Good for reading logs where
+# each line is seperately stored as json
+#
+# Example: cat /var/log/sytem.json.logs | json_lines
+
+command -v json_pp >/dev/null 2>&1 || { echo >&2 "json_pp is required"; exit 1; }
+while read line
+do
+  echo "$line" | json_pp
+done
