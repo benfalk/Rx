@@ -33,7 +33,7 @@ chmod 775 kerl
 sudo chown root:root kerl
 sudo mv kerl /usr/bin
 kerl build 17.4 17_4
-kerl install 17_4 ~/.erlang/17_4/
+kerl install 17_4 ~/.erlang_builds/17_4/
 
 # Powerline
 sudo apt-get install python-pip -y
