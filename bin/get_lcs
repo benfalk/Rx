@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# get_lcs
+#
+# Fetches a week of LCS from YouTube using youtube-dl
+#
+# Example: get_lcs 8
+
+# curl https://www.youtube.com/playlist?list=PLPZ7h6L6LC7X4ZoUmRssP4GpPyb6pmskf | grep "Week 8" | grep -o watch?v=[a-Z0-9\-]*
+# this get's a list of all the urls to fetch... how to use them though?
