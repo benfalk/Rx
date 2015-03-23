@@ -27,6 +27,14 @@ sudo apt-get install tmux -y
 sudo apt-get install finch -y
 sudo apt-get install silversearcher-ag -y
 
+# Erlang & Elixir
+curl -O https://raw.githubusercontent.com/spawngrid/kerl/master/kerl
+chmod 775 kerl
+sudo chown root:root kerl
+sudo mv kerl /usr/bin
+kerl build 17.4 17_4
+kerl install 17_4 ~/.erlang_builds/17_4/
+
 # Powerline
 sudo apt-get install python-pip -y
 pip install --user git+git://github.com/Lokaltog/powerline
