@@ -6,5 +6,20 @@
 #
 # Example: get_lcs 8
 
-# curl https://www.youtube.com/playlist?list=PLPZ7h6L6LC7X4ZoUmRssP4GpPyb6pmskf | grep "Week 8" | grep -o watch?v=[a-Z0-9\-]*
-# this get's a list of all the urls to fetch... how to use them though?
+command -v youtube-dl > /dev/null 2>&1 || { echo >&2 "youtube-dl is required"; exit 1; }
+
+echo "Fetching EU Week $1"
+curl -# https://www.youtube.com/playlist?list=PLPZ7h6L6LC7X4ZoUmRssP4GpPyb6pmskf | \
+  grep "Week $1" | \
+  grep -o watch?v=[\_a-Z0-9\-]* | \
+  while read -r line ; do
+    youtube-dl "https://www.youtube.com/$line"
+  done
+
+echo "Fetching NA Week $1"
+curl -# https://www.youtube.com/playlist?list=PLPZ7h6L6LC7X7JyFE14uywro-O6GsDryA | \
+  grep "Week $1" | \
+  grep -o watch?v=[\_a-Z0-9\-]* | \
+  while read -r line ; do
+    youtube-dl "https://www.youtube.com/$line"
+  done
