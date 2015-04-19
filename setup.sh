@@ -14,6 +14,7 @@ sudo apt-get install python-dev -y
 sudo apt-get install curl -y
 sudo apt-get install git -y
 sudo apt-get install xclip -y
+sudo apt-get install phantomjs -y
 
 # Latest Nodejs
 sudo add-apt-repository ppa:chris-lea/node.js -y
