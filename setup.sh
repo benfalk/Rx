@@ -58,6 +58,7 @@ fi
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/inputrc ~/.inputrc
+ln -sf ~/.dotfiles/bash_aliases ~/.bash_aliases
 
 # In depth vim setup
 ln -sf ~/.dotfiles/vimrc ~/.vimrc
