@@ -16,6 +16,7 @@ sudo apt-get install git -y
 sudo apt-get install xclip -y
 sudo apt-get install phantomjs -y
 sudo apt-get install htop -y
+sudo apt-get install multitail -y
 
 # Latest Nodejs
 sudo add-apt-repository ppa:chris-lea/node.js -y
