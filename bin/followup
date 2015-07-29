@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# followup
+#
+# Goes through any number of files matching lines that match the pattern given,
+# then it continues following each file showing lines that match until you force
+# quit it.
+#
+# Example: followup /var/log/*/*.log error
+
+length=$(($#-1))
+files=${@:1:$length}
+term="${!#}"
+cat $files | grep $term && tail -f $files | grep $term
