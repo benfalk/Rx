@@ -74,6 +74,12 @@ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/rking/ag.vim ~/.vim/bundle/ag
 vim +PluginInstall +qall
 
+# Mutate
+sudo add-apt-repository ppa:mutate/ppa
+sudo apt-get update
+sudo apt-get install libboost-regex1.55-dev
+sudo apt-get install mutate
+
 # Core environment
 curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
