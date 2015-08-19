@@ -64,6 +64,7 @@ ln -sf ~/.dotfiles/bash_aliases ~/.bash_aliases
 
 # In depth vim setup
 ln -sf ~/.dotfiles/vimrc ~/.vimrc
+ln -sf ~/.dotfiles/vim/autoload/netrw.vim ~/.vim/autoload/netrw.vim
 mkdir -p ~/.vim/colors
 wget https://raw.githubusercontent.com/Lokaltog/vim-distinguished/develop/colors/distinguished.vim
 mv distinguished.vim ~/.vim/colors/
@@ -79,6 +80,8 @@ sudo add-apt-repository ppa:mutate/ppa
 sudo apt-get update
 sudo apt-get install libboost-regex1.55-dev
 sudo apt-get install mutate
+sudo rm -rf ~/.config/Mutate
+ln -s ~/.dotfiles/config/Mutate ~/.config/
 
 # Core environment
 curl -sSL https://get.rvm.io | bash -s stable
