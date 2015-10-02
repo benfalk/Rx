@@ -19,6 +19,7 @@ sudo apt-get install htop -y
 sudo apt-get install multitail -y
 sudo apt-get install parallel -y
 sudo apt-get install diodon -y
+sudo apt-get install ispell -y
 
 # Latest Nodejs
 sudo add-apt-repository ppa:chris-lea/node.js -y
