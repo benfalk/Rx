@@ -1,0 +1,10 @@
+#!/bin/bash
+
+command -v aspell > /dev/null 2>&1 || { echo >&2 "aspell is required"; exit 1; }
+if [ -n "$( echo "$*" | aspell list )" ]
+then
+  found=$(echo "$*" | aspell -a | sed "s/@(#) International Ispell Version 3.1.20 (but really Aspell 0.60.7-20110707)//g" | cut -d : -f 2 | sed 's/,/\n/g')
+  echo -e "\033[0;31m$*\033[0m$found"
+else
+  echo -e "\033[0;32m$*\033[0m"
+fi
