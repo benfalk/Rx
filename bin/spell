@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# checks the spelling of a words and will echo it green if it's right
+# if it's wrong it will echo it red and provide suggestions
+
 command -v aspell > /dev/null 2>&1 || { echo >&2 "aspell is required"; exit 1; }
 if [ -n "$( echo "$*" | aspell list )" ]
 then
