@@ -92,6 +92,6 @@ curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm install 2.2
 sudo apt-get install nginx -y
-sudo apt-get install postgresql-9.4 postgresql-server-dev-9.4 postgresql-contrib-9.4 -y
+sudo apt-get install postgresql-9.4 postgresql-server-dev-9.4 postgresql-contrib-9.4 postgresql-9.4-postgis-2.1 -y
 sudo apt-get install redis-server -y
 sudo apt-get install libmagickwand-dev -y
