@@ -21,6 +21,12 @@ sudo apt-get install parallel -y
 sudo apt-get install diodon -y
 sudo apt-get install ispell -y
 
+# Rust looks like fun!
+sudo apt-apt-repository ppa:hansjorg/rust -y
+sudo apt-apt-repository ppa:cmrx64/cargo -y
+sudo apt-get update -y
+sudo apt-get install rust-stable cargo -y
+
 # Latest Nodejs
 sudo add-apt-repository ppa:chris-lea/node.js -y
 sudo apt-get update -y
