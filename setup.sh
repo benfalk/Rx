@@ -10,6 +10,7 @@ sudo apt-get update -y
 sudo apt-get install build-essential -y
 sudo apt-get install cmake -y
 sudo apt-get install python-software-properties -y
+sudo apt-get install software-properties-common -y
 sudo apt-get install python-dev -y
 sudo apt-get install curl -y
 sudo apt-get install git -y
@@ -19,7 +20,6 @@ sudo apt-get install htop -y
 sudo apt-get install multitail -y
 sudo apt-get install parallel -y
 sudo apt-get install diodon -y
-sudo apt-get install ispell -y
 
 # Rust looks like fun!
 sudo apt-apt-repository ppa:hansjorg/rust -y
@@ -32,10 +32,14 @@ sudo add-apt-repository ppa:chris-lea/node.js -y
 sudo apt-get update -y
 sudo apt-get install nodejs -y
 
+# tmux 2.0
+sudo add-apt-repository ppa:pi-rho/dev -y
+sudo apt-get update -y
+sudo apt-get install tmux=2.0-1~ppa1~t -y
+
 # Core development set
 sudo apt-get install vim-gnome -y
 sudo apt-get install konsole -y
-sudo apt-get install tmux -y
 sudo apt-get install finch -y
 sudo apt-get install silversearcher-ag -y
 
