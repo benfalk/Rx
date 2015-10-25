@@ -32,6 +32,12 @@ sudo add-apt-repository ppa:chris-lea/node.js -y
 sudo apt-get update -y
 sudo apt-get install nodejs -y
 
+# Docker, yay?
+echo "Installing Docker..."
+curl -s https://get.docker.com | sh
+sudo usermod -aG docker $USER
+echo "Finished Installing Docker..."
+
 # tmux 2.0
 sudo add-apt-repository ppa:pi-rho/dev -y
 sudo apt-get update -y
