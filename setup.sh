@@ -22,8 +22,8 @@ sudo apt-get install parallel -y
 sudo apt-get install diodon -y
 
 # Rust looks like fun!
-sudo apt-apt-repository ppa:hansjorg/rust -y
-sudo apt-apt-repository ppa:cmrx64/cargo -y
+sudo add-apt-repository ppa:hansjorg/rust -y
+sudo add-apt-repository ppa:cmrx64/cargo -y
 sudo apt-get update -y
 sudo apt-get install rust-stable cargo -y
 
