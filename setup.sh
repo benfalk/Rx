@@ -19,6 +19,7 @@ sudo apt-get install phantomjs -y
 sudo apt-get install htop -y
 sudo apt-get install multitail -y
 sudo apt-get install parallel -y
+sudo apt-get install jq -y
 sudo apt-get install diodon -y
 
 # Rust looks like fun!
