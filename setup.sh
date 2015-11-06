@@ -21,6 +21,7 @@ sudo apt-get install multitail -y
 sudo apt-get install parallel -y
 sudo apt-get install jq -y
 sudo apt-get install diodon -y
+sudo apt-get install wmctrl suckless-tools -y
 
 # Rust looks like fun!
 sudo add-apt-repository ppa:hansjorg/rust -y
