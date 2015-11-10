@@ -71,6 +71,10 @@ mkdir -p ~/.fonts/ && mv PowerlineSymbols.otf ~/.fonts/
 fc-cache -vf ~/.fonts
 mkdir -p ~/.config/fontconfig/conf.d/ && mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
+# Fuzzy Finder
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --bin
+
 # I'm moving in!
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/benfalk/dotfiles ~/.dotfiles
@@ -82,6 +86,7 @@ ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/inputrc ~/.inputrc
 ln -sf ~/.dotfiles/bash_aliases ~/.bash_aliases
 ln -sf ~/.dotfiles/gitignore_global ~/.gitignore_global
+ln -sf ~/.dotfiles/fzf.bash ~/.fzf.bash
 git config --global core.excludesfile ~/.gitignore_global
 
 # In depth vim setup
