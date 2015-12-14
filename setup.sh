@@ -24,6 +24,7 @@ sudo apt-get install diodon -y
 sudo apt-get install wmctrl suckless-tools -y
 sudo apt-get install tudu -y
 sudo apt-get install tpp -y
+sudo apt-get install weechat -y
 
 # Rust looks like fun!
 sudo add-apt-repository ppa:hansjorg/rust -y
