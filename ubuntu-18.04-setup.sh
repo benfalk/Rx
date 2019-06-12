@@ -76,9 +76,10 @@ fi
 
 ## Pour out a 40 for Mutate; I loved it, but Albert works out of the box with 18.04
 if ! type "albert" > /dev/null; then
+  curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
   sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list"
   sudo apt-get update
-  sudo apt-get install albert
+  sudo apt-get install albert -y
   mkdir -p ~/.config/albert/
   ln -sf ~/.dotfiles/config/albert/albert.conf ~/.config/albert/albert.conf
   ln -sf ~/.dotfiles/local/share/albert ~/.local/share/albert
