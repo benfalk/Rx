@@ -8,19 +8,20 @@
 ## Base Packages
 if ! [ -f "$HOME/.initial-setup" ]; then
   sudo apt update
-  sudo apt install build-essential -y
-  sudo apt install cmake -y
-  sudo apt install python-software-properties -y
-  sudo apt install python-dev -y
-  sudo apt install curl -y
-  sudo apt install git -y
-  sudo apt install xclip -y
-  sudo apt install htop -y
-  sudo apt install jq -y
-  sudo apt install wmctrl suckless-tools -y
-  sudo apt install tmux -y
-  sudo apt install silversearcher-ag -y
-  sudo apt install fonts-firacode -y
+  sudo apt install build-essential \
+   cmake \
+   python-software-properties \
+   python-dev \
+   curl \
+   git \
+   xclip \
+   htop \
+   jq \
+   wmctrl suckless-tools \
+   tmux \
+   silversearcher-ag \
+   fonts-firacode -y
+
   echo '
   This file serves as a flag to determine if the initial
   setup has happened from the https://github.com/benfalk/Rx
@@ -60,7 +61,7 @@ fi
 
 ## Install Neovim, Editor of Choice
 if ! type "nvim" > /dev/null; then
-  sudo add-apt-repository ppa:neovim-ppa/unstable
+  sudo add-apt-repository ppa:neovim-ppa/unstable -y
   sudo apt update
   sudo apt install neovim python3-pip -y
   pip3 install neovim
@@ -88,7 +89,7 @@ fi
 ## My new Favorite Terminal
 if ! type "kitty" > /dev/null; then
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-  sudo ln -sf ~/.local/kitty.app/bin/kitty /bin/kitty
+  sudo ln -sf ~/.local/kitty.app/bin/kitty /usr/bin/kitty
   ln -sf ~/.dotfiles/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 fi
 
