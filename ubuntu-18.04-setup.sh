@@ -73,6 +73,8 @@ if ! type "nvim" > /dev/null; then
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   wget https://raw.githubusercontent.com/Lokaltog/vim-distinguished/develop/colors/distinguished.vim
   mv distinguished.vim ~/.config/nvim/colors/
+  wget https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+  mv jellybeans.vim ~/.config/nvim/colors/
 fi
 
 ## Pour out a 40 for Mutate; I loved it, but Albert works out of the box with 18.04
@@ -91,6 +93,8 @@ if ! type "kitty" > /dev/null; then
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   sudo ln -sf ~/.local/kitty.app/bin/kitty /usr/bin/kitty
   ln -sf ~/.dotfiles/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+  git clone --depth 1 git@github.com:dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
+  ln -sf ~/.config/kitty/kitty-themes/themes/Jellybeans.conf ~/.config/kitty/theme.conf
 fi
 
 ## Elixir/Erlang Development Language
