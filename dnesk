@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# I keep having problems getting my DNS working with my VPN,
+# so in order to keep myself from going insane this script
+# will automatically set / update your hosts file with all
+# entries found directly under a #DNESK! tag
+
+HOSTS_FILE="/etc/hosts"
+DNS_SERVER="172.29.0.1"
+
+awk 'BEGIN {p=0}; /#DNESK!/ {p=1; next}; p {print}; p=0;' $HOSTS_FILE |
+  while read -r line; do
+    host=$(echo $line | grep -o -e "[^ ]*$")
+    new_ip=$(dig @$DNS_SERVER $host +short | \
+      grep -o -e "[[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+" | \
+      head -n 1)
+    sed -i "s/$line/$new_ip $host/" $HOSTS_FILE
+  done
+
